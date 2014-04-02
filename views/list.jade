@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	h1= title
+	ul
+		each website, index in websites
+			- website = website.getInformation()
+			li= website.websiteName + ': ' + website.monthStarted + '-' + website.monthEnded
